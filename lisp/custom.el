@@ -1,8 +1,8 @@
 
 (custom-set-variables
- '(company-minimum-prefix-length 2)
- '(company-tooltip-idle-delay 0.05))
-(custom-set-faces)
+ '(company-minimum-prefix-length 1)
+ '(company-idle-delay 0.05))
 
 
-(provide 'custom)
+
+

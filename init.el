@@ -1,3 +1,4 @@
+(package-initialize)
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 (defun open-my-init-file();定义打开配置文件函数
  (interactive)
@@ -8,12 +9,12 @@
 (require 'init-better-defaults)
 (require 'init-org)
 (require 'init-keybindings)
-(require 'custom)
+
 
 
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 
-
+(load-file custom-file)
 
 
 
