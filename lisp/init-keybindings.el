@@ -16,4 +16,17 @@
 (global-set-key (kbd "<f3>") 'eval-buffer);设置执行整个缓冲区快捷键
 (global-set-key (kbd "C-c p f") 'counsel-git)
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
+(global-set-key (kbd "s-/") 'hippie-expand)
+
+
+
+
+
+
+
+
+
+
+
+
 (provide 'init-keybindings)
