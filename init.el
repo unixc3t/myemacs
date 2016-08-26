@@ -1,4 +1,5 @@
 (package-initialize)
+(package-refresh-contents)
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 (defun open-my-init-file();定义打开配置文件函数
  (interactive)

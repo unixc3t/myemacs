@@ -16,11 +16,12 @@
 		       nodejs-repl
 		       js2-mode
 		       popwin
+		       flycheck
 		       ) "Default packages")
 
 (setq package-selected-packages c3t/packages)
 
-
+(global-flycheck-mode t)
 (global-auto-revert-mode t)
 (defun c3t/packages-installed-p ()
   (loop for pkg in c3t/packages
