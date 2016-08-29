@@ -41,7 +41,9 @@
 (global-hungry-delete-mode)
 
 (smartparens-global-mode t) ;全局使用smartparens
+(sp-local-pair '(emacs-lisp-mode lisp-interaction-mode) "'" nil :actions nil)
 
+;;(sp-local-pair 'emacs-lisp-mode' "'" nil :actions nil)
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 
