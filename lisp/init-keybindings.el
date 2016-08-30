@@ -18,6 +18,11 @@
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 (global-set-key (kbd "s-/") 'hippie-expand)
 (global-set-key (kbd "C-c t i") 'my-toggle-web-indent) ;;切换缩进
+(global-set-key (kbd "M-s o") 'occur-dwim)
+
+(global-set-key (kbd "M-s i") 'counsel-imenu)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
