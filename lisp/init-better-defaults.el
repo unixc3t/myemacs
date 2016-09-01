@@ -44,7 +44,7 @@
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 (add-hook 'after-init-hook 'global-company-mode)
 
-
+(set-default-font "Comic sans ms-12")
 ;;自定义缩进函数
 (defun indent-buffer()
   "Indent the currently visited buffer."

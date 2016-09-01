@@ -33,7 +33,9 @@
 		       rubocop
 		       ac-inf-ruby
 		       auto-complete
-		       quickrun 
+		       quickrun
+		       helm-ag
+		       flycheck
 		       ) "Default packages")
 
 (setq package-selected-packages c3t/packages)
@@ -135,7 +137,7 @@
 (setq indent-tabs-mode nil))
 
 (global-company-mode t)
-
+(global-flycheck-mode t)
 
 (load-theme 'spacemacs-dark  t);添加主题
 (require 'popwin)
