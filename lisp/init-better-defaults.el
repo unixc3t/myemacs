@@ -15,7 +15,7 @@
 (recentf-mode 1)  ; 1 或者 t表示开启模式
 (setq-default recentf-max-menu-items 35)  ;设置最大的最近文件打开记录
 
-
+(set-language-environment "UTF-8")
 
 
 ;;(define-advice show-paren-function (:around (fn) fix-show-paren-function)

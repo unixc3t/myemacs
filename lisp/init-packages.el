@@ -1,5 +1,6 @@
 (when (>= emacs-major-version 24)
   (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/")   t)
+ ;; (add-to-list 'load-path "~/.emacs.d/elpa/auto-complete-20160827.649/dict")
   )
 
 (require 'cl)
@@ -23,10 +24,20 @@
 		       js2-refactor
 		       expand-region
 		       iedit
+		       inf-ruby
+		       robe
+		       ruby-compilation
+		       rspec-mode
+		       flymake-ruby
+		       ruby-tools
+		       rubocop
+		       ac-inf-ruby
+		       auto-complete
+		       quickrun 
 		       ) "Default packages")
 
 (setq package-selected-packages c3t/packages)
-
+(require 'quickrun)
 (global-flycheck-mode t)
 (global-auto-revert-mode t)
 (defun c3t/packages-installed-p ()
@@ -121,27 +132,11 @@
   (if (eq major-mode 'css-mode)
       (setq css-indent-offset (if (= css-indent-offset 2) 4 2)))
 
-  (setq indent-tabs-mode nil))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+(setq indent-tabs-mode nil))
 
 (global-company-mode t)
+
+
 (load-theme 'spacemacs-dark  t);添加主题
 (require 'popwin)
 (popwin-mode t)
