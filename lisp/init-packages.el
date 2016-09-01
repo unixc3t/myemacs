@@ -36,7 +36,9 @@
 		       quickrun
 		       helm-ag
 		       flycheck
+		       auto-yasnippet
 		       ) "Default packages")
+
 
 (setq package-selected-packages c3t/packages)
 (require 'quickrun)
@@ -57,6 +59,14 @@
 
 (require 'expand-region)
 (require 'hungry-delete)
+(require 'flycheck)
+
+(setq flycheck-javascript-eslint-executable   "~/.nvm/versions/node/v6.4.0/bin/eslint")
+(setq flycheck-javascript-standard-executable "~/.nvm/versions/node/v6.4.0/bin/standard")
+(setq flycheck-eslintrc "~/.emacs.d/js/eslintrc")
+
+
+(add-hook 'js2-mode-hook 'flycheck-mode)
 (global-hungry-delete-mode)
 ;;config for js2-refactor-mode
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
@@ -138,6 +148,12 @@
 
 (global-company-mode t)
 (global-flycheck-mode t)
+
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
+
+(global-set-key (kbd "H-w") #'aya-create)
+(global-set-key (kbd "H-y") #'aya-expand)
 
 (load-theme 'spacemacs-dark  t);添加主题
 (require 'popwin)
