@@ -1,11 +1,13 @@
 (when (>= emacs-major-version 24)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/")   t)
- ;; (add-to-list 'load-path "~/.emacs.d/elpa/auto-complete-20160827.649/dict")
-  )
+  ;;  (add-to-list  'package-archives  '("popkit" . "http://elpa.popkit.org/packages/"))
+  (setq package-archives '(("popkit". "http://elpa.popkit.org/packages/")
+			   ("gnu"   . "http://elpa.zilongshanren.com/gnu/")
+			   ("melpa" . "http://elpa.zilongshanren.com/melpa/")))
+)
 
-(require 'cl)
-(setq url-gateway-method 'socks)
-(setq socks-server '("Default server" "127.0.0.1" 1080 5))
+
+;;(setq url-gateway-method 'socks)
+;;(setq socks-server '("Default server" "127.0.0.1" 1080 5))
 
 (defvar c3t/packages '(
 		       company
@@ -37,13 +39,16 @@
 		       helm-ag
 		       flycheck
 		       auto-yasnippet
+		       evil
+		       undo-tree
+		       goto-chg
+		       evil-leader
+		       window-numbering
+		       powerline
 		       ) "Default packages")
 
-
+(require 'cl)
 (setq package-selected-packages c3t/packages)
-(require 'quickrun)
-(global-flycheck-mode t)
-(global-auto-revert-mode t)
 (defun c3t/packages-installed-p ()
   (loop for pkg in c3t/packages
 	when(not (package-installed-p pkg)) do (return nil)
@@ -56,10 +61,21 @@
     (when (not (package-installed-p pkg))
       (package-install pkg)))) 
 
+(require 'quickrun)
+(global-flycheck-mode t)
+(global-auto-revert-mode t)
 
 (require 'expand-region)
 (require 'hungry-delete)
 (require 'flycheck)
+(require 'evil)
+(require 'powerline)
+(powerline-default-theme)
+(window-numbering-mode 1)
+(global-evil-leader-mode)
+(evil-mode 1)
+(setcdr evil-insert-state-map nil)
+(define-key evil-insert-state-map [escape] 'evil-normal-state)
 
 (setq flycheck-javascript-eslint-executable   "~/.nvm/versions/node/v6.4.0/bin/eslint")
 (setq flycheck-javascript-standard-executable "~/.nvm/versions/node/v6.4.0/bin/standard")

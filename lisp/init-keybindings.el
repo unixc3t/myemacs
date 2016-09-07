@@ -1,3 +1,4 @@
+
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "M-x") 'counsel-M-x)
@@ -43,5 +44,21 @@
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
 (global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
+(global-set-key (kbd "C-w") 'backward-kill-word)
+
+(evil-leader/set-key
+  "ff" 'find-file
+  "bb" 'switch-to-buffer
+  "bk" 'kill-buffer
+  "1" 'select-window-1
+  "2" 'select-window-2
+  "3" 'select-window-3
+  "4" 'select-window-4
+  "5" 'select-window-5
+  "6" 'select-window-6
+  "w/" 'split-window-right
+  "w-" 'split-window-below
+  "wm" 'delete-other-windows
+  )
 
 (provide 'init-keybindings)
