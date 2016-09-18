@@ -45,6 +45,10 @@
 		       evil-leader
 		       window-numbering
 		       powerline
+		       groovy-mode
+		       grails-mode
+		       haml-mode
+		       slim-mode
 		       ) "Default packages")
 
 (require 'cl)
@@ -70,6 +74,7 @@
 (require 'flycheck)
 (require 'evil)
 (require 'powerline)
+(require 'slim-mode)
 (powerline-default-theme)
 (window-numbering-mode 1)
 (global-evil-leader-mode)
@@ -115,6 +120,7 @@
 (add-hook 'web-mode-hook 'my-web-mode-indent-setup)
 ;;add emmet-mode-config
 (require 'emmet-mode)
+(require 'haml-mode)
 (add-hook 'web-mode-hook 'emmet-mode)
 (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
 (setq emmet-move-cursor-between-quotes t) ;; default nil

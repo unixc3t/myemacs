@@ -1,34 +1,42 @@
-((("split-window-below" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("select-window-0" .
-   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("window-numbering" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("powerline" .
+((("slim-mode" .
    [1 0 0 0 0 0 0 0 0])
-  ("setq" .
+  ("slim" .
    [1 0 0 0])
-  ("helm-ag" .
-   [1 0 0 0 0 0 0])
-  ("nil" .
-   [1 0 0])
-  ("ac-complete-mode-map" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("define-key" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("ruby" .
-   [1 0 0 0])
-  ("init-ruby" .
-   [2 0 0 0 0 0 0 0 0])
-  ("require" .
-   [3 0 0 0 0 0 0])
-  ("add-to-list" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("flycheck" .
-   [1 0 0 0 0 0 0 0])
-  ("class" .
-   [0 0 1 0 0])
+  ("s" .
+   [1])
+  ("groovy" .
+   [1 0 0 0 0 0])
+  ("delete-other-windows" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("flycheck-jscsrc" .
    [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("delete-other-windows" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])))
+  ("class" .
+   [0 0 1 0 0])
+  ("flycheck" .
+   [1 0 0 0 0 0 0 0])
+  ("add-to-list" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("require" .
+   [5 0 0 0 0 0 0])
+  ("init-ruby" .
+   [2 0 0 0 0 0 0 0 0])
+  ("ruby" .
+   [1 0 0 0])
+  ("define-key" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("ac-complete-mode-map" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("nil" .
+   [1 0 0])
+  ("helm-ag" .
+   [1 0 0 0 0 0 0])
+  ("setq" .
+   [1 0 0 0])
+  ("powerline" .
+   [1 0 0 0 0 0 0 0 0])
+  ("window-numbering" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("select-window-0" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("split-window-below" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])))

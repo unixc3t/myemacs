@@ -1,0 +1,1 @@
+(define-package "groovy-mode" "20160505.1501" "Major mode for Groovy source files"  'nil  :url "https://github.com/Groovy-Emacs-Modes/groovy-emacs-modes" :keywords '("languages" ))
