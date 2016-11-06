@@ -1,0 +1,1 @@
+(define-package "sass-mode" "20161007.1426" "Major mode for editing Sass files" '((haml-mode "3.0.15") (cl-lib "0.5")) 'url: "https://github.com/nex3/sass-mode" :keywords '(" markup" " language" " css"))

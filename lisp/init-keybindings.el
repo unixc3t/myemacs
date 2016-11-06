@@ -1,5 +1,3 @@
-(ivy-mode 1)
-(setq ivy-use-virtual-buffers t)
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "M-x") 'counsel-M-x)
@@ -7,6 +5,16 @@
 (global-set-key (kbd "C-h C-f") 'counsel-describe-function)
 (global-set-key (kbd "C-h C-v") 'counsel-describe-variable)
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
+(global-set-key (kbd "C-c p f") 'counsel-git)
+(global-set-key (kbd "C-c m t") 'multi-term)
+(global-set-key (kbd "C-c m d") 'multi-term-dedicated-close)
+(global-set-key (kbd "C-c m o") 'multi-term-dedicated-open)
+(global-set-key (kbd "C-c m t") 'multi-term-dedicated-toggle)
+(global-set-key (kbd "C-c m s") 'multi-term-dedicated-select)
+
+(js2r-add-keybindings-with-prefix "C-c C-m")	
+
+(global-set-key (kbd "M-s i") 'counsel-imenu)
 (global-set-key (kbd "<f5>") 'open-my-init-file);定义打开配置文件快捷键
 (global-set-key (kbd "<f9>") 'quickrun)
 ;;(global-set-key "C-x C-r" 'recentf-open-files) ; 定义快捷键 打开文件打开记录列表
@@ -20,13 +28,13 @@
 
 (global-set-key (kbd "<f3>") 'eval-buffer);设置执行整个缓冲区快捷键
 (global-set-key (kbd "C-c p f") 'counsel-git)
-(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
-(global-set-key (kbd "s-/") 'hippie-expand)
+(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer);调用自定义缩进函数
+(global-set-key (kbd "s-/") 'hippie-expand);补全路径功能s=command=win,win+/
 (global-set-key (kbd "C-c t i") 'my-toggle-web-indent) ;;切换缩进
 (global-set-key (kbd "M-s o") 'occur-dwim)
 
 (global-set-key (kbd "M-s i") 'counsel-imenu)
-(global-set-key (kbd "M-s e") 'iedit-mode)
+;(global-set-key (kbd "M-s e") 'iedit-mode);批量修改相同匹配字符串 使用c-;
 (global-set-key (kbd "C-=") 'er/expand-region)
 
 (with-eval-after-load 'company
@@ -44,11 +52,10 @@
 
 
 (with-eval-after-load 'dired
-  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file));共用一个buffer,不会导致buffer特别多
 
 (global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
 (global-set-key (kbd "C-w") 'backward-kill-word)
-
 (evil-leader/set-key
   "ff" 'find-file
   "bb" 'switch-to-buffer

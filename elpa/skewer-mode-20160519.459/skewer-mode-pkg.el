@@ -1,0 +1,1 @@
+(define-package "skewer-mode" "20160519.459" "live browser JavaScript, CSS, and HTML interaction" '((emacs "24") (js2-mode "20090723") (simple-httpd "1.4.0")) 'url: "https://github.com/skeeto/skewer-mode" :keywords '(""))

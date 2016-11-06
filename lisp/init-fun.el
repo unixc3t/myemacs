@@ -22,7 +22,7 @@
 
 (defun my-web-mode-indent-setup ()
   (setq web-mode-markup-indent-offset 2) ; web-mode, html tag in html file
-  (setq web-mode-css-indent-offset 2)    ; web-mode, css in html file
+  (setq web-mode-css-indent-offset 2)    ; web-mode, css in html filne
   (setq web-mode-code-indent-offset 2)   ; web-mode, js code in html file
   )
 (add-hook 'web-mode-hook 'my-web-mode-indent-setup)
@@ -48,6 +48,28 @@
 
       )))
 
+;下面的代码用于配置 Occur Mode 使其默认搜索当前被选中的或者在光标下的字符串
+;dwim = do what i mean
+(defun occur-dwim ()
+  "Call `occur' with a sane default."
+  (interactive)
+  (push (if (region-active-p)
+	    (buffer-substring-no-properties
+	     (region-beginning)
+	     (region-end))
+	  (let ((sym (thing-at-point 'symbol)))
+	    (when (stringp sym)
+	      (regexp-quote sym))))
+	regexp-history)
+  (call-interactively 'occur))
+;括号内的括号自动匹配
+(defadvice show-paren-function (around fix-show-paren-function activate)
+  (cond ((looking-at-p "\\s(") ad-do-it)
+	(t (save-excursion
+	     (ignore-errors (backward-up-list))
+	     ad-do-it)))
+  )
+
 
 (defun hidden-dos-eol ()
   "Do not show ^M in files containing mixed UNIX and DOS line endings."
@@ -61,6 +83,23 @@
   (interactive)
   (goto-char (point-min))
   (while (search-forward "\r" nil t) (replace-match "")))
+
+;增强imenu显示函数列表
+(defun js2-imenu-make-index ()
+      (interactive)
+      (save-excursion
+	;; (setq imenu-generic-expression '((nil "describe\\(\"\\(.+\\)\"" 1)))
+	(imenu--generic-function '(("describe" "\\s-*describe\\s-*(\\s-*[\"']\\(.+\\)[\"']\\s-*,.*" 1)
+				   ("it" "\\s-*it\\s-*(\\s-*[\"']\\(.+\\)[\"']\\s-*,.*" 1)
+				   ("test" "\\s-*test\\s-*(\\s-*[\"']\\(.+\\)[\"']\\s-*,.*" 1)
+				   ("before" "\\s-*before\\s-*(\\s-*[\"']\\(.+\\)[\"']\\s-*,.*" 1)
+				   ("after" "\\s-*after\\s-*(\\s-*[\"']\\(.+\\)[\"']\\s-*,.*" 1)
+				   ("Function" "function[ \t]+\\([a-zA-Z0-9_$.]+\\)[ \t]*(" 1)
+				   ("Function" "^[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*=[ \t]*function[ \t]*(" 1)
+				   ("Function" "^var[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*=[ \t]*function[ \t]*(" 1)
+				   ("Function" "^[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*()[n \t]*{" 1)
+				   ("Function" "^[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*:[ \t]*function[ \t]*(" 1)
+				   ("Task" "[. \t]task([ \t]*['\"]\\([^'\"]+\\)" 1)))))
 
 
 (provide 'init-fun)

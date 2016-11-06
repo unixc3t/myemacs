@@ -1,0 +1,1 @@
+(define-package "websocket" "20160721.1151" "Emacs WebSocket client and server"  'nil  :url "https://github.com/ahyatt/emacs-websocket" :keywords '("Communication" "Websocket" "Server" ))

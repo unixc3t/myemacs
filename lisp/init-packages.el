@@ -1,6 +1,4 @@
 (when (>= emacs-major-version 24)
-   (require 'package)
-    (package-initialize)
   ;;  (add-to-list  'package-archives  '("popkit" . "http://elpa.popkit.org/packages/"))
   (setq package-archives '(("popkit". "http://elpa.popkit.org/packages/")
 			   ("gnu"   . "http://elpa.zilongshanren.com/gnu/")
@@ -26,6 +24,7 @@
 		       web-mode
 		       emmet-mode
 		       js2-refactor
+		       ruby-refactor
 		       expand-region
 		       iedit
 		       inf-ruby
@@ -56,6 +55,15 @@
 		       markdown-preview-mode
 		       gradle-mode
 		       lua-mode
+		       multi-term
+		       slim-mode
+		       sass-mode
+		       web-beautify
+		       simple-httpd
+		       json-mode
+		       livid-mode
+		       scss-mode
+		       impatient-mode
 		       ) "Default packages")
 
 (require 'cl)
@@ -74,21 +82,27 @@
       (package-install pkg)))) 
 
 (require 'haml-mode)
-
+(require 'simple-httpd)
+(require 'web-beautify)
+(require 'sass-mode)
+(require 'ruby-refactor)
 (require 'hungry-delete)
+(require 'livid-mode)
+(require 'impatient-mode)
 (global-hungry-delete-mode)
 
-(load-theme 'spacemacs-dark  t);添加主题
-(set-default-font "monaco-11")
 (require 'dired-x)
-(setq dired-dwin-target t)
+(require 'dired)
+(require 'recentf)  ;引入 recentf这个文件功能
+(recentf-mode 1)  ; 1 或者 t表示开启模式
+(setq-default recentf-max-menu-items 35)  ;设置最大的最近文件打开记录
 
 (require 'popwin)
 (popwin-mode t)
-
+(require 'slim-mode)
 (require 'gradle-mode)
 (gradle-mode 1)
-
+(require 'iedit)
 (require 'quickrun)
 (require 'expand-region)
 
@@ -99,6 +113,7 @@
 (evil-mode 1)
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
+(global-evil-leader-mode)
 (require 'powerline)
 (require 'slim-mode)
 (powerline-default-theme)
@@ -107,9 +122,18 @@
 ;;add emmet-mode-cofig
 (require 'emmet-mode)
 (add-hook 'web-mode-hook 'emmet-mode)
+(add-hook 'scss-mode-hook 'emmet-mode)
+(add-hook 'css-mode-hook 'emmet-mode)
 (add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+
+(add-hook 'ruby-mode-hook 'ruby-refactor-mode-launch)
 (setq emmet-move-cursor-between-quotes t) ;; default nil
 
+(ivy-mode 1)
+(setq ivy-use-virtual-buffers t)
+
+ (require 'multi-term)
+ (setq multi-term-program "/bin/zsh")
 
 
 (provide 'init-packages) 
