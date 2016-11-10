@@ -1,0 +1,1 @@
+(define-package "company-c-headers" "20160830.855" "Company mode backend for C/C++ header files" '((emacs "24.1") (company "0.8")) 'url: "https://github.com/randomphrase/company-c-headers" :keywords '(" development company"))

@@ -1,0 +1,1 @@
+(define-package "feature-mode" "20160806.1115" "Major mode for editing Gherkin (i.e. Cucumber) user stories")

@@ -1,0 +1,1 @@
+(define-package "edn" "20160215.2019" "Support for reading and writing the  data format fromisp" '((emacs "24.1") (peg "0.6") (cl-lib "0.3")) 'url: "https://github.com/expez/edn.el" :keywords '(" edn clojure"))
