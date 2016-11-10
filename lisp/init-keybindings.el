@@ -11,6 +11,7 @@
 (global-set-key (kbd "C-c m o") 'multi-term-dedicated-open)
 (global-set-key (kbd "C-c m t") 'multi-term-dedicated-toggle)
 (global-set-key (kbd "C-c m s") 'multi-term-dedicated-select)
+(global-set-key (kbd "C-x a") 'ace-jump-mode-pop-mark)
 
 (js2r-add-keybindings-with-prefix "C-c C-m")	
 
@@ -20,6 +21,7 @@
 ;;(global-set-key "C-x C-r" 'recentf-open-files) ; 定义快捷键 打开文件打开记录列表
 (global-set-key (kbd "H-w") #'aya-create)
 (global-set-key (kbd "H-y") #'aya-expand)
+(global-set-key (kbd "<f8>") 'neotree-toggle)
 
 
 ;;(global-set-key (kbd "C-h C-f") 'find-function)
@@ -36,6 +38,12 @@
 (global-set-key (kbd "M-s i") 'counsel-imenu)
 ;(global-set-key (kbd "M-s e") 'iedit-mode);批量修改相同匹配字符串 使用c-;
 (global-set-key (kbd "C-=") 'er/expand-region)
+
+
+ (eval-after-load 'inf-ruby
+     '(define-key inf-ruby-minor-mode-map
+        (kbd "C-c C-s") 'inf-ruby-console-auto))
+
 
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "M-n") nil)

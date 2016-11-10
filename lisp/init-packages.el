@@ -10,6 +10,7 @@
 ;;(setq socks-server '("Default server" "127.0.0.1" 1080 5))
 
 (defvar c3t/packages '(
+		       rainbow-mode
 		       company
 		       solarized-theme
 		       spacemacs-theme
@@ -24,10 +25,13 @@
 		       web-mode
 		       emmet-mode
 		       js2-refactor
-		       ruby-refactor
 		       expand-region
 		       iedit
+		       company-c-headers
+		       google-c-style
 		       inf-ruby
+		       company-inf-ruby
+		       ruby-refactor
 		       robe
 		       ruby-compilation
 		       rspec-mode
@@ -35,6 +39,10 @@
 		       ruby-tools
 		       rubocop
 		       ac-inf-ruby
+		       yari
+		       ruby-block
+		       ruby-end
+		      ;enh-ruby-mode
 		       auto-complete
 		       quickrun
 		       helm-ag
@@ -64,6 +72,11 @@
 		       livid-mode
 		       scss-mode
 		       impatient-mode
+		       neotree
+		       feature-mode
+		       ztree
+		       highlight-indentation
+		       ace-jump-mode
 		       ) "Default packages")
 
 (require 'cl)
@@ -85,12 +98,17 @@
 (require 'simple-httpd)
 (require 'web-beautify)
 (require 'sass-mode)
+(require 'scss-mode)
 (require 'ruby-refactor)
+(require 'enh-ruby-mode)
 (require 'hungry-delete)
 (require 'livid-mode)
 (require 'impatient-mode)
 (global-hungry-delete-mode)
+(require 'neotree)
 
+
+(add-to-list 'load-path "~/.emacs.d/elpa/ace-jump-mode-20140616.1615/")
 (require 'dired-x)
 (require 'dired)
 (require 'recentf)  ;引入 recentf这个文件功能
@@ -117,7 +135,7 @@
 (require 'powerline)
 (require 'slim-mode)
 (powerline-default-theme)
-
+(ac-config-default)
 
 ;;add emmet-mode-cofig
 (require 'emmet-mode)

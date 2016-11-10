@@ -18,13 +18,21 @@
 (setq ad-redefinition-action 'accept)
 
 
+(autoload
+  'ace-jump-mode-pop-mark
+  "ace-jump-mode"
+  "Ace jump back:-)"
+  t)
+(eval-after-load "ace-jump-mode"
+  '(ace-jump-mode-enable-mark-sync))
+
+
 
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode) ;显示括号匹配
 (add-hook 'ruby-mode-hook  'smartparens-mode) 
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 (add-hook 'after-init-hook 'global-company-mode)
 (add-hook 'after-init-hook 'smartparens-mode)
-
 
 (setq auto-mode-alist
       (append

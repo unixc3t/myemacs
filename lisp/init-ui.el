@@ -13,7 +13,7 @@
 (set-frame-height (selected-frame) 80) ;编辑器高度
 
 ;;窗体透明
-(global-set-key (kbd "<f8>") 'loop-alpha)
+(global-set-key (kbd "<f7>") 'loop-alpha)
 (setq alpha-list '((100 100) (95 65) (85 55) (75 45) (65 35)))
 
 (defun loop-alpha ()
