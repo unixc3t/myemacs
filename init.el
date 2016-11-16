@@ -12,6 +12,7 @@
 (require 'init-org)
 (require 'init-ruby)
 (require 'init-js)
+(require 'init-cpp)
 (require 'init-fun)
 
 (require 'init-keybindings)
