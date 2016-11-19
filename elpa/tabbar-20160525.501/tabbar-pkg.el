@@ -1,0 +1,1 @@
+(define-package "tabbar" "20160525.501" "Display a tab bar in the header line"  'nil  :url "https://github.com/dholm/tabbar" :keywords '("convenience" ))

@@ -16,6 +16,9 @@
 (set-language-environment 'utf-8)
 (global-auto-revert-mode t)
 (setq ad-redefinition-action 'accept)
+(require 'tabbar-ruler)
+(setq tabbar-ruler-global-tabbar t)
+
 
 
 (autoload

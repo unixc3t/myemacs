@@ -19,8 +19,8 @@
 (global-set-key (kbd "<f5>") 'open-my-init-file);定义打开配置文件快捷键
 (global-set-key (kbd "<f9>") 'quickrun)
 ;;(global-set-key "C-x C-r" 'recentf-open-files) ; 定义快捷键 打开文件打开记录列表
-(global-set-key (kbd "H-w") #'aya-create)
-(global-set-key (kbd "H-y") #'aya-expand)
+(global-set-key (kbd "H-w") #'aya-create) ;auto-yasinppet补全
+(global-set-key (kbd "H-y") #'aya-expand) ;auto-yasinppet补全
 (global-set-key (kbd "<f8>") 'neotree-toggle)
 
 
@@ -62,7 +62,7 @@
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file));共用一个buffer,不会导致buffer特别多
 
-(global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
+(global-set-key (kbd "C-c p s") 'helm-do-ag-project-root);使用helm-ag搜索
 (global-set-key (kbd "C-w") 'backward-kill-word)
 (evil-leader/set-key
   "ff" 'find-file

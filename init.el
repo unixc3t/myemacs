@@ -17,7 +17,10 @@
 
 (require 'init-keybindings)
 
+
+(setenv "PATH" (concat "/home/rudy/.nvm/versions/node/v7.0.0/bin/:" (getenv "PATH")))
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
+
 
 (load-file custom-file)
 

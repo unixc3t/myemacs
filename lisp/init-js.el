@@ -1,8 +1,6 @@
 ;;javascript config
 
-(setq flycheck-javascript-eslint-executable   "~/.nvm/versions/node/v6.4.0/bin/eslint")
-(setq flycheck-javascript-standard-executable "~/.nvm/versions/node/v6.4.0/bin/standard")
-(setq flycheck-eslintrc "~/.emacs.d/js/eslintrc")
+;(setq flycheck-javascript-standard-executable "~/.nvm/versions/node/v6.4.0/bin/standard")
 (add-hook 'js2-mode-hook 'flycheck-mode)
 ;;config for js2-refactor-mode
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
@@ -51,6 +49,8 @@
                     (add-hook 'before-save-hook 'web-beautify-css-buffer t t))))
 
 
+(setq flycheck-javascript-eslint-executable   "~/.nvm/versions/node/v7.0.0/bin/eslint")
+(setq flycheck-eslintrc "~/.emacs.d/js/eslintrc")
 
 
 (provide 'init-js)

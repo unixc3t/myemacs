@@ -1,0 +1,1 @@
+(define-package "mode-icons" "20160808.2025" "Show icons for modes"  '((emacs "24") (cl-lib "0.5") ) :url "https://github.com/ryuslash/mode-icons" :keywords '("multimedia" ))

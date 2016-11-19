@@ -1,0 +1,1 @@
+(define-package "tabbar-ruler" "20160802.1107" "Pretty tabbar, autohide, use both tabbar/ruler" '((powerline "2.3") (tabbar "2.0.1") (cl-lib "0.5") (mode-icons "0.4.0")) 'url: "https://github.com/mattfidler/tabbar-ruler.el" :keywords '(" Tabbar" " Ruler Mode" " Menu" " Tool Bar."))

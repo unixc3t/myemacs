@@ -10,15 +10,19 @@
 ;;(setq socks-server '("Default server" "127.0.0.1" 1080 5))
 
 (defvar c3t/packages '(
+		       helm
 		       rainbow-mode
+		       magit
 		       company
 		       solarized-theme
 		       spacemacs-theme
 		       hungry-delete
 		       swiper
 		       counsel
+		       exec-path-from-shell
 		       smartparens
 		       nodejs-repl
+		       tabbar
 		       js2-mode
 		       popwin
 		       flycheck
@@ -52,6 +56,7 @@
 		       undo-tree
 		       goto-chg
 		       evil-leader
+		       tabbar-ruler
 		       window-numbering
 		       powerline
 		       groovy-mode
@@ -60,7 +65,9 @@
 		       slim-mode
 		       markdown-mode
 		       websocket 
+		       markdown-preview-eww
 		       markdown-preview-mode
+		       helm-ag
 		       gradle-mode
 		       lua-mode
 		       multi-term
@@ -95,6 +102,7 @@
       (package-install pkg)))) 
 
 (require 'haml-mode)
+ (require 'helm)
 (require 'simple-httpd)
 (require 'web-beautify)
 (require 'sass-mode)
@@ -152,6 +160,9 @@
 
  (require 'multi-term)
  (setq multi-term-program "/bin/zsh")
+(require 'yasnippet)
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
 
 
 (provide 'init-packages) 
