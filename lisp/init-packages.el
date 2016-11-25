@@ -14,6 +14,9 @@
 		       rainbow-mode
 		       magit
 		       company
+		       lua-mode
+		       company-lua
+		       nginx-mode
 		       solarized-theme
 		       spacemacs-theme
 		       hungry-delete
@@ -101,7 +104,15 @@
     (when (not (package-installed-p pkg))
       (package-install pkg)))) 
 
+(require 'company)
+(require 'company-lua)
+(require 'lua-mode)
+(add-to-list 'company-backends 'company-lua)
+ (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+    (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+    (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 (require 'haml-mode)
+(require 'nginx-mode)
  (require 'helm)
 (require 'simple-httpd)
 (require 'web-beautify)
