@@ -52,5 +52,6 @@
 (setq flycheck-javascript-eslint-executable   "~/.nvm/versions/node/v7.0.0/bin/eslint")
 (setq flycheck-eslintrc "~/.emacs.d/js/eslintrc")
 
+(setq web-mode-enable-current-element-highlight t)
 
 (provide 'init-js)

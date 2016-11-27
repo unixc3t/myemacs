@@ -12,6 +12,8 @@
 (defvar c3t/packages '(
 		       helm
 		       rainbow-mode
+		       cider
+		       highlight-symbol
 		       magit
 		       company
 		       lua-mode

@@ -13,6 +13,7 @@
 (require 'init-ruby)
 (require 'init-js)
 (require 'init-cpp)
+(require 'init-clojure)
 (require 'init-fun)
 
 (require 'init-keybindings)
