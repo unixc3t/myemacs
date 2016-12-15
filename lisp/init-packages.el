@@ -21,6 +21,8 @@
 		       nginx-mode
 		       solarized-theme
 		       spacemacs-theme
+		       monokai-theme
+		       material-theme
 		       hungry-delete
 		       swiper
 		       counsel

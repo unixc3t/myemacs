@@ -1,5 +1,5 @@
 
-(load-theme 'spacemacs-dark  t);添加主题
+(load-theme 'solarized-dark  t);添加主题
 (set-default-font "monaco-11")
 
 
