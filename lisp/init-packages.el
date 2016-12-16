@@ -27,6 +27,7 @@
 		       swiper
 		       counsel
 		       exec-path-from-shell
+		       projectile-rails
 		       smartparens
 		       nodejs-repl
 		       tabbar
@@ -124,6 +125,7 @@
 (require 'scss-mode)
 (require 'ruby-refactor)
 (require 'enh-ruby-mode)
+(projectile-rails-global-mode)
 (require 'hungry-delete)
 (require 'livid-mode)
 (require 'impatient-mode)
