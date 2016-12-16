@@ -13,6 +13,7 @@
 (global-set-key (kbd "C-c m s") 'multi-term-dedicated-select)
 (global-set-key (kbd "C-x a") 'ace-jump-mode-pop-mark)
 
+
 (js2r-add-keybindings-with-prefix "C-c C-m")	
 
 (global-set-key (kbd "M-s i") 'counsel-imenu)
