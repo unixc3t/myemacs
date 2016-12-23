@@ -70,7 +70,6 @@
 		       groovy-mode
 		       grails-mode
 		       haml-mode
-		       slim-mode
 		       markdown-mode
 		       websocket 
 		       markdown-preview-eww
@@ -82,6 +81,7 @@
 		       slim-mode
 		       sass-mode
 		       web-beautify
+		       company-web
 		       simple-httpd
 		       json-mode
 		       livid-mode
@@ -119,6 +119,9 @@
 (require 'haml-mode)
 (require 'nginx-mode)
  (require 'helm)
+(require 'company-web-html)
+(require 'company-web-jade)
+(require 'company-web-slim)
 (require 'simple-httpd)
 (require 'web-beautify)
 (require 'sass-mode)
@@ -158,7 +161,6 @@
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
 (global-evil-leader-mode)
 (require 'powerline)
-(require 'slim-mode)
 (powerline-default-theme)
 (ac-config-default)
 

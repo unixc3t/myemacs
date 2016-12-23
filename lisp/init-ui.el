@@ -1,6 +1,6 @@
 
 (load-theme 'solarized-dark  t);添加主题
-(set-default-font "monaco-11")
+(set-default-font "文泉驿正黑-12")
 
 
 (tool-bar-mode -1) ;去掉工具图标栏(tool-bar-mode -1)

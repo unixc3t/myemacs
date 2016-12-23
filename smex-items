@@ -1,0 +1,18 @@
+
+;; ----- smex-history -----
+(
+ set-input-method
+ term
+ toggle-debug-on-error
+ cd
+ 5x5
+ arp
+ dbx
+)
+
+;; ----- smex-data -----
+(
+ (term . 2)
+ (toggle-debug-on-error . 3)
+ (set-input-method . 1)
+)

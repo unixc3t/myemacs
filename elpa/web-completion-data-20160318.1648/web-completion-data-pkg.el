@@ -1,0 +1,1 @@
+(define-package "web-completion-data" "20160318.1648" "Shared completion data for achtml and companyweb"  'nil  :url "https://github.com/osv/web-completion-data" :keywords '("html" "auto-complete" "company" ))
