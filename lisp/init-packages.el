@@ -15,6 +15,7 @@
 		       cider
 		       highlight-symbol
 		       magit
+		       rake
 		       company
 		       lua-mode
 		       company-lua
@@ -28,7 +29,9 @@
 		       counsel
 		       exec-path-from-shell
 		       projectile-rails
+		       counsel-projectile
 		       smartparens
+		       highlight-parentheses
 		       nodejs-repl
 		       tabbar
 		       js2-mode
@@ -42,6 +45,8 @@
 		       company-c-headers
 		       google-c-style
 		       inf-ruby
+		       inflections
+		       projectile
 		       company-inf-ruby
 		       ruby-refactor
 		       robe
@@ -54,6 +59,7 @@
 		       yari
 		       ruby-block
 		       ruby-end
+		       use-package
 		      ;enh-ruby-mode
 		       auto-complete
 		       quickrun
@@ -111,6 +117,7 @@
 
 (require 'company)
 (require 'company-lua)
+(require 'highlight-parentheses)
 (require 'lua-mode)
 (add-to-list 'company-backends 'company-lua)
  (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
@@ -128,7 +135,6 @@
 (require 'scss-mode)
 (require 'ruby-refactor)
 (require 'enh-ruby-mode)
-(projectile-rails-global-mode)
 (require 'hungry-delete)
 (require 'livid-mode)
 (require 'impatient-mode)
@@ -160,6 +166,7 @@
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
 (global-evil-leader-mode)
+(counsel-projectile-on)
 (require 'powerline)
 (powerline-default-theme)
 (ac-config-default)
@@ -178,10 +185,11 @@
 (setq ivy-use-virtual-buffers t)
 
  (require 'multi-term)
- (setq multi-term-program "/bin/zsh")
+ (setq multi-term-program "/bin/bash")
 (require 'yasnippet)
 (yas-reload-all)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
+
 
 
 (provide 'init-packages) 

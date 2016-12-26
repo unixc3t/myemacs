@@ -1,7 +1,8 @@
 
 (load-theme 'solarized-dark  t);添加主题
-(set-default-font "文泉驿正黑-12")
+(set-default-font "文泉驿正黑-13")
 
+(global-hl-line-mode 1)
 
 (tool-bar-mode -1) ;去掉工具图标栏(tool-bar-mode -1)
 (scroll-bar-mode -1) ;去掉屏幕右侧滚动条
@@ -26,7 +27,6 @@
     (setq alpha-list (cdr (append alpha-list (list h))))
     )
 )
-
 
 
 ;;(setq initial-frame-alist (quote ((fullscreen . maximized)))) ;;全屏

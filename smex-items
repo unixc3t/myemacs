@@ -1,18 +1,28 @@
 
 ;; ----- smex-history -----
 (
- set-input-method
+ multi-term
+ evil-ret
+ evil-mode
+ rake-compilation-mode
+ rake
  term
- toggle-debug-on-error
- cd
- 5x5
- arp
- dbx
+ vline-global-mode
 )
 
 ;; ----- smex-data -----
 (
- (term . 2)
+ (term . 3)
  (toggle-debug-on-error . 3)
  (set-input-method . 1)
+ (hl-line-mode . 1)
+ (hlt-highlight-lines . 3)
+ (column-highlight-mode . 2)
+ (column-number-mode . 1)
+ (vline-global-mode . 3)
+ (rake . 1)
+ (multi-term . 3)
+ (rake-compilation-mode . 1)
+ (evil-mode . 1)
+ (evil-ret . 2)
 )
