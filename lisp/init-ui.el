@@ -1,6 +1,6 @@
 
 (load-theme 'solarized-dark  t);添加主题
-(set-default-font "文泉驿正黑-13")
+(set-default-font "monaco-12")
 
 (global-hl-line-mode 1)
 

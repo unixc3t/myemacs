@@ -14,12 +14,14 @@
 		       rainbow-mode
 		       cider
 		       highlight-symbol
+		       highlight-indent-guides
 		       magit
 		       rake
 		       company
 		       lua-mode
 		       company-lua
 		       nginx-mode
+		       coffee-mode
 		       solarized-theme
 		       spacemacs-theme
 		       monokai-theme
@@ -69,12 +71,14 @@
 		       evil
 		       undo-tree
 		       goto-chg
+		       indent-guide
 		       evil-leader
 		       tabbar-ruler
 		       window-numbering
-		       powerline
+		       powerline-evil
 		       groovy-mode
 		       grails-mode
+		       grails-projectile-mode
 		       haml-mode
 		       markdown-mode
 		       websocket 
@@ -98,6 +102,8 @@
 		       ztree
 		       highlight-indentation
 		       ace-jump-mode
+		       evil-surround
+		       evil-nerd-commenter
 		       ) "Default packages")
 
 (require 'cl)
@@ -167,8 +173,12 @@
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
 (global-evil-leader-mode)
 (counsel-projectile-on)
-(require 'powerline)
-(powerline-default-theme)
+(require 'evil-surround)
+(global-evil-surround-mode 1)
+(define-key evil-normal-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
+(define-key evil-visual-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
+(evilnc-default-hotkeys)
+(require 'powerline-evil)
 (ac-config-default)
 
 ;;add emmet-mode-cofig
@@ -189,7 +199,16 @@
 (require 'yasnippet)
 (yas-reload-all)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
+(require 'grails-projectile-mode)
+(grails-projectile-global-mode t)
 
-
-
+;;(require 'indent-guide)
+;;(indent-guide-global-mode)
+(add-hook 'ruby-mode-hook 'highlight-indent-guides-mode)
+(add-hook 'slim-mode-hook 'highlight-indent-guides-mode)
+(add-hook 'web-mode-hook 'highlight-indent-guides-mode)
+(add-hook 'scss-mode-hook 'highlight-indent-guides-mode)
+(add-hook 'css-mode-hook 'hightlight-indent-guides-mode)
+(setq highlight-indent-guides-method 'character)
+(custom-set-variables '(coffee-tab-width 2))
 (provide 'init-packages) 

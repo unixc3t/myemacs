@@ -32,7 +32,9 @@
 
 
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode) ;显示括号匹配
+(add-hook 'web-mode-hook 'show-paren-mode) ;显示括号匹配
 (add-hook 'ruby-mode-hook  'smartparens-mode) 
+(add-hook 'ruby-mode-hook  'show-parens-mode) 
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 (add-hook 'after-init-hook 'global-company-mode)
 (add-hook 'after-init-hook 'smartparens-mode)

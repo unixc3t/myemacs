@@ -30,7 +30,6 @@
 (global-set-key (kbd "C-h C-k") 'find-function-on-key)
 
 (global-set-key (kbd "<f3>") 'eval-buffer);设置执行整个缓冲区快捷键
-(global-set-key (kbd "C-c p f") 'counsel-git)
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer);调用自定义缩进函数
 (global-set-key (kbd "s-/") 'hippie-expand);补全路径功能s=command=win,win+/
 (global-set-key (kbd "C-c t i") 'my-toggle-web-indent) ;;切换缩进
@@ -69,6 +68,7 @@
   "ff" 'find-file
   "bb" 'switch-to-buffer
   "bk" 'kill-buffer
+  "ps" 'helm-do-ag-project-root
   "1" 'select-window-1
   "2" 'select-window-2
   "3" 'select-window-3
@@ -77,6 +77,7 @@
   "6" 'select-window-6
   "w/" 'split-window-right
   "w-" 'split-window-below
+  ":" 'counsel-M-x
   "wm" 'delete-other-windows
   )
 
