@@ -20,6 +20,7 @@
 		       company
 		       lua-mode
 		       company-lua
+		       which-key
 		       nginx-mode
 		       coffee-mode
 		       solarized-theme
@@ -210,4 +211,7 @@
 (add-hook 'css-mode-hook 'hightlight-indent-guides-mode)
 (setq highlight-indent-guides-method 'character)
 (custom-set-variables '(coffee-tab-width 2))
+
+(which-key-mode 1)
+(setq which-key-side-window-location 'right)
 (provide 'init-packages) 

@@ -69,6 +69,7 @@
   "bb" 'switch-to-buffer
   "bk" 'kill-buffer
   "ps" 'helm-do-ag-project-root
+  "pf" 'counsel-git
   "1" 'select-window-1
   "2" 'select-window-2
   "3" 'select-window-3
