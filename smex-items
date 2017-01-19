@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ magit-push
+ magit-commit
+ magit-status
  multi-term
  evil-ret
  evil-mode
  rake-compilation-mode
- rake
- term
- vline-global-mode
 )
 
 ;; ----- smex-data -----
@@ -25,4 +25,7 @@
  (rake-compilation-mode . 1)
  (evil-mode . 1)
  (evil-ret . 2)
+ (magit-status . 8)
+ (magit-commit . 8)
+ (magit-push . 3)
 )
