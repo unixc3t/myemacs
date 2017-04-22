@@ -19,6 +19,7 @@
 		       rake
 		       company
 		       lua-mode
+		       path-headerline-mode
 		       company-lua
 		       which-key
 		       nginx-mode
@@ -214,4 +215,7 @@
 
 (which-key-mode 1)
 (setq which-key-side-window-location 'right)
+
+(require 'path-headerline-mode)
+(path-headerline-mode +1)
 (provide 'init-packages) 

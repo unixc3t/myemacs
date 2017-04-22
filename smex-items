@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
- magit-push
- magit-commit
- magit-status
- multi-term
- evil-ret
- evil-mode
- rake-compilation-mode
+ split-window-right
+ replace-string
+ uncomment-region
+ comment-region
+ query-replace
+ find-tag-regexp
+ rubocop-mode
 )
 
 ;; ----- smex-data -----
@@ -28,4 +28,11 @@
  (magit-status . 8)
  (magit-commit . 8)
  (magit-push . 3)
+ (rubocop-mode . 1)
+ (find-tag-regexp . 1)
+ (query-replace . 2)
+ (comment-region . 2)
+ (uncomment-region . 1)
+ (replace-string . 1)
+ (split-window-right . 1)
 )

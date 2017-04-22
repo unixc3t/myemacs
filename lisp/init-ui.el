@@ -1,6 +1,6 @@
 
 (load-theme 'solarized-dark  t);添加主题
-(set-default-font "monaco-12")
+(set-default-font "Knack Nerd Font-12")
 
 (global-hl-line-mode 1)
 
